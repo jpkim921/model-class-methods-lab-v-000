@@ -12,7 +12,7 @@ class Boat < ActiveRecord::Base
 
   def self.dinghy
     # Boat.all.map {|boat| boat.name if boat.length < 20}.compact
-    Boat.all.where(length < 20)
+    Boat.all.where(:length < 20)
   end
 
   def self.ship
